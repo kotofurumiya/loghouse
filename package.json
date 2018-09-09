@@ -1,0 +1,40 @@
+{
+  "name": "loghouse",
+  "version": "1.0.0",
+  "description": "Logleveling library realized by possessing console object.",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "format": "prettier --write 'src/**/*.ts'",
+    "typedoc": "typedoc ./src --out ./docs --readme README.md && nodetouch ./docs/.nojekyll",
+    "test": "node __tests__/loghouse.test.js",
+    "webpack": "webpack",
+    "build": "npm run format && tsc && npm run typedoc && webpack"
+  },
+  "keywords": [
+    "log",
+    "logger",
+    "logging"
+  ],
+  "author": "Koto Furumiya <kotofurumiya@gmail.com> (https://sbfl.net/)",
+  "license": "MIT",
+  "files": [
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kotofurumiya/loghouse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kotofurumiya/loghouse/issues",
+    "email": "kotofurumiya@gmail.com"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.2",
+    "touch": "^3.1.0",
+    "typedoc": "^0.12.0",
+    "typescript": "^3.0.3",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
